@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(180deg, #020024, #020c3b, #010b2a);
+    color: #fff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.container h1 {
+    font-size: 32px;
+    margin-bottom: 60px;
+}
+
+/* ========= ANIMAÇÃO REVEAL ========= */
+
+/* Estado inicial */
+.reveal {
+    opacity: 0;
+    transform: translateY(80px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Estado final */
+.reveal.active {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+/* ========= CARDS ========= */
+
+.cards {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    padding: 35px 25px;
+    width: 340px;
+    text-align: center;
+
+    /* Importante: transition separada para hover */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover leve sem quebrar animação */
+.card:hover {
+    transform: translateY(-8px) !important;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+}
+
+.icon {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.card h2 {
+    color: #00d9ff;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card ul {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.card ul li {
+    margin: 5px 0;
+}
+
+.text {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #ddd;
+}
+
+button {
+    background: #2ecc71;
+    border: none;
+    padding: 12px 30px;
+    color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #27ae60;
+}
+
+/* ========= RESPONSIVO ========= */
+
+@media (max-width: 900px) {
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+}

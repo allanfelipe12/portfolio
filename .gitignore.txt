@@ -1,0 +1,8 @@
+# Ignorar arquivos do Windows
+AppData/
+Thumbs.db
+.DS_Store
+
+# Ignorar pastas temporárias
+*.log
+node_modules/

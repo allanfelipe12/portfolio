@@ -1,0 +1,62 @@
+
+
+
+
+.formacao-section {
+  background-color: #0d0f2a;
+  padding: 60px 20px;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.titulo {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.subtitulo {
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  color: #9bb5ff;
+}
+
+.bloco h3 {
+  margin-top: 25px;
+  font-size: 18px;
+  color: #b6c8ff;
+}
+
+ul {
+  margin-left: 20px;
+  line-height: 1.7;
+}
+
+a {
+  color: #6fa3ff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Animação ao rolar */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.6s ease;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
