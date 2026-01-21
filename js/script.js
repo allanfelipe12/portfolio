@@ -126,3 +126,40 @@ stats.forEach(stat => {
   update();
 });
 
+
+ //INICIALIZA O EMAILJS
+(function () {
+  emailjs.init("cqm6z7oFkfu8j_k9z");
+})();
+
+console.log("EmailJS OK:", emailjs);
+
+const form = document.getElementById("contatoForm");
+const statusMsg = document.getElementById("status");
+
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  statusMsg.textContent = "Enviando...";
+  statusMsg.style.color = "#fff";
+
+  emailjs.sendForm(
+    "service_0ke9bf9",
+    "template_4as4kuh",
+    this
+  )
+  .then(() => {
+    statusMsg.textContent = "Mensagem enviada com sucesso 🚀";
+    statusMsg.style.color = "#2ecc71";
+    form.reset();
+  })
+  .catch((error) => {
+    console.error(error);
+    statusMsg.textContent = "Erro ao enviar.";
+    statusMsg.style.color = "red";
+  });
+});
+
+
+

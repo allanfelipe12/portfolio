@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 
@@ -59,9 +60,21 @@ font-size: 14px;
 
 
 /*--------- ------*/
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+  outline: none;
+}
 
 .reusable-button:hover {
     background-color: #45a049;
+    transform: translateY(10px);
+  transition: 0.3s ease;
 }
 
 
@@ -123,7 +136,7 @@ font-size: 14px;
   display: inline-block;
   min-width: 260px;    /* 🔥 valor ideal */
   flex-shrink: 0;
-  color: #00ff88 !important;
+  color: #2ecc71 !important;
   border-right: none !important;
   padding-right: 5px;
 }
@@ -393,12 +406,14 @@ font-size: 14px;
 .portfolio-title {
     font-size: 28px;
     font-weight: bold;
+    margin-bottom: 10px;
 }
 
 .portfolio-subtitle {
     
-    font-size: 16px;
-    opacity: .8;
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 15px;
 }
 
 /* GRID DE LOGOS */
@@ -413,13 +428,14 @@ font-size: 14px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 10px;
 }
 
 .portfolio-item img {
   width: 220px;
   height: 120px;
   object-fit: contain;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
 }
 
 .portfolio-item button {

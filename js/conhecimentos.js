@@ -12,7 +12,7 @@ const observer = new IntersectionObserver(
         });
     },
     {
-        threshold: 1.0 // o elemento deve estar 100% visível
+        threshold: 0.5 // o elemento deve estar 100% visível
     }
 );
 
