@@ -131,55 +131,64 @@ font-size: 14px;
 
 
 /* CONTAINER DAS ESTRELAS + PROJETOS */
+
 .stats {
+  max-width: 1100px;
+  margin: 80px auto 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ESQUERDA */
+.stats-left p {
+  margin-bottom: 12px;
+}
+
+.social {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 40px;
-  justify-content: center;
-  margin: 20px 0 30px;
+  gap: 8px;
 }
 
-.rating {
-  grid-column: 1 / 2;
-  margin: 10px 0;
+.social a {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid #2ecc71;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2ecc71;
+  transition: 0.3s;
 }
 
-.rating i {
-  color: #ffd700;
+.social a:hover {
+  background: #2ecc71;
+  color: #020220;
+}
+
+/* DIREITA */
+.stats-right {
+  text-align: center;
 }
 
 .projects {
-  grid-column: 1 / 2;
-  font-size: 36px;
+  font-size: 56px;
   font-weight: bold;
-  margin: 15px 0;
+  padding-left: 10px;
 }
 
 .projects small {
   display: block;
   font-size: 14px;
-  font-weight: normal;
+  opacity: 0.8;
 }
 
-.social {
-  grid-column: 1 / 2;
-}
-
-.social p {
-  margin-bottom: 10px;
-}
-
-.social a {
-  color: #fff;
-  margin-right: 10px;
-  font-size: 20px;
-}
-
-.social a:hover {
-  color: #ffd700;
+.rating {
+  color: #f5c542;
+  margin-top: 8px;
 }
 
 
@@ -260,19 +269,24 @@ font-size: 14px;
 /* ===== SECTION UI/UX DESIGNER ===== */
 
 .section-designer {
-  padding: 60px 20px; /* espaçamento da seção */
-  background-color: #020230; /* opcional: cor de fundo */
-  display: flex;  /* alinha topo da imagem com topo do conteúdo */
-  justify-content: center;
-  gap: 40px;                  /* espaço entre imagem e texto */
-  flex-wrap: wrap;  
+  background-color: #020230;   /* azul escuro igual ao print */
+  padding: 80px 0;
+  color: #fff;
+  
+}
+.section-container {
+  width: 90%;
+  max-width: 1300px;
+  margin: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 50px;          /* centraliza a seção na tela */
 }
 
 .designer-container {
-  display: flex;  /* alinha topo da imagem com topo do conteúdo */
-  justify-content: center;
-  gap: 40px;                  /* espaço entre imagem e texto */
-  flex-wrap: wrap;            /* permite quebrar linha em telas menores */
+                  /* espaço entre imagem e texto */
+              /* permite quebrar linha em telas menores */
   max-width: 1200px;          /* largura máxima da seção */
   margin: 0 auto;             /* centraliza a seção na tela */
 }
@@ -280,15 +294,19 @@ font-size: 14px;
 
 
 .designer-img img {
-  margin-left: 100px;
-  width: 500px;
-  height: 400px;
-  border-radius: 10px;
+   max-width: 1000px;   /* largura fixa */
+    height: cover;     /* mantém a proporção */
+    height: 500px;
+
+  display: block;
+  margin: 0 auto;
 }
+
 
 .designer-content {
   flex: 1;                     /* ocupa todo o espaço restante */
   min-width: 300px;
+  
 }
 
 .designer-content h2 {
@@ -649,6 +667,162 @@ font-size: 14px;
   }
 }
 
+/* ===== Corrigir RESPONSIVIDADE do título com typing ===== */
+.typing-title {
+  display: flex;
+  flex-wrap: wrap;       /* PERMITE QUEBRE */
+  justify-content: center;
+  text-align: center;
+  gap: 5px;              /* espaço entre texto e o span */
+  width: 100%;
+}
+
+/* o span não pode passar do tamanho da tela */
+#typing {
+  max-width: 100% !important;
+  word-break: break-word !important;
+  overflow-wrap: break-word !important;
+  white-space: normal !important;   /* o principal */
+}
+
+/* ajuste para telas muito pequenas */
+@media (max-width: 450px) {
+  .typing-title {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+}
+
+/* ================================
+   SOBRE MIM – RESPONSIVO
+================================ */
+@media (max-width: 900px) {
+  .sobre-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .sobre-texto ul {
+    text-align: left;
+    padding: 0 15px;
+  }
+
+  .sobre-img img {
+    width: 85%;
+    max-width: 320px;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+/* ================================
+   UI/UX DESIGNER – RESPONSIVO
+================================ */
+@media (max-width: 900px) {
+  .section-designer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .designer-img img {
+    width: 85%;
+    max-width: 340px;
+    margin: 0 auto 25px auto;
+  }
+
+  .designer-content {
+    padding: 0 20px;
+  }
+
+  .designer-stats {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .designer-stats hr {
+    display: none;
+  }
+}
+
+/* ================================
+   HABILIDADES – RESPONSIVO
+================================ */
+@media (max-width: 900px) {
+  .Habilidades-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 25px;
+  }
+
+  .habilidades-texto ul {
+    text-align: left;
+    padding: 0 15px;
+  }
+
+  .habilidade-img img {
+    width: 80%;
+    max-width: 320px;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+/* ============================
+   RESPONSIVO — Designer section
+=============================== */
+@media (max-width: 800px) {
+  .designer {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+}
+
+/* ============================
+   GRID RESPONSIVO (skills, cards, etc.)
+=============================== */
+@media (max-width: 600px) {
+  .skills {
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  }
+
+  .projetos-lista {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+}
+
+/* ============================
+   AJUSTES MENORES — Mobile pequeno
+=============================== */
+@media (max-width: 480px) {
+  h1, h2 {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  #hero img {
+    width: 80%;
+  }
+
+  .container {
+    padding: 15px;
+  }
+}
+
+/* ============================
+   ANTI OVERFLOW NO MOBILE
+=============================== */
+@media (max-width: 420px) {
+  body,
+  html {
+    overflow-x: hidden !important;
+  }
+}
+
 
 /* OVERLAY */
 .overlay {
@@ -694,3 +868,27 @@ font-size: 14px;
 
 
 /* ====== FOOTER ====== */
+
+
+/* ======== CORREÇÃO SOMENTE DA PÁGINA PRINCIPAL ======== */
+@media (max-width: 900px) {
+
+  .hero {
+    flex-direction: column;     /* empilha texto e imagem */
+    text-align: center;
+    padding-top: 140px;
+    gap: 30px;
+  }
+
+  .hero-text {
+    align-items: center;
+  }
+
+  .hero img {
+    width: 70%;
+    max-width: 260px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+}

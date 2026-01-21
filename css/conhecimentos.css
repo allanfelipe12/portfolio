@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+       body {
+    padding-top: 70px;  /* ajuste de acordo com a altura do seu navbar */
+}
+
 body {
     min-height: 100vh;
     background: linear-gradient(180deg, #020024, #020c3b, #010b2a);

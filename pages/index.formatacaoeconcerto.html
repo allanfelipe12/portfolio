@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/conhecimentos.css">
+   
+    <title>Document</title>
+</head>
+<body>
+    <div id="navbar-container"></div>
+
+    <h1>Formatação e concerto de computadores.</h1>
+<p>Meus conhecimentos de formatação e o conserto de computadores  envolve  serviços  para garantir o funcionamento adequado 
+    e a longevidade dos dispositivos. Esses processos envolvem a remoção de dados indesejados, a resolução de problemas de hardware e software, 
+    e a otimização do desempenho do sistema. </p>
+
+    <ol>
+        <li>Desempenho Lento:</li>
+        <p>Quando o computador apresenta lentidão significativa devido a acúmulo de arquivos temporários, malwares ou programas indesejados.</p>
+        <li>Problemas de Software:</li>
+        <p>Para resolver conflitos de software, falhas frequentes e problemas que não podem ser solucionados por métodos tradicionais de reparo.</p>
+        <li>Venda ou Doação:</li>
+        <p>Antes de vender ou doar um computador, a formatação é essencial para proteger informações pessoais e garantir que o novo usuário tenha um sistema limpo.</p>
+        <li>Reinstalação do Sistema Operacional:</li>
+        <p>O serviço inclui a reinstalação do sistema operacional (como Windows, macOS ou Linux), configurando o computador para funcionamento ideal.</p>
+    </ol>
+    <ol>
+        <li>Diagnóstico de Problemas:</li>
+        <p>Identificação de falhas de hardware, como problemas no disco rígido, memória RAM, placa-mãe ou fonte de alimentação.</p>
+        <li>Substituição de Componentes:</li>
+        <p>Troca de peças danificadas ou defeituosas, como HD, SSD, placas gráficas, teclados e telas.</p>
+        <li>Remoção de Vírus e Malware:</li>
+        <p>Limpeza do sistema de vírus, spyware e outras ameaças, além da instalação de software de segurança para prevenir futuras infecções.</p>
+        <li>Atualizações de Hardware e Software:</li>
+        <p>Instalação de atualizações de sistema, drivers e aplicativos para garantir que o computador esteja sempre em sua melhor forma.</p>
+        <li>Melhoria do Desempenho:</li>
+        <p>Otimização do sistema através da limpeza de arquivos, desfragmentação de disco e ajuste de configurações para melhorar a velocidade e eficiência.</p>
+    </ol>
+
+
+     <style>
+
+        h1 {
+    margin-bottom: 15px;    
+        }
+
+      p {
+    margin-bottom: 15px;
+}
+
+ol {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+li {
+    margin-bottom: 6px;
+}
+
+               body {
+    padding-top: 80px;  /* ajuste de acordo com a altura do seu navbar */
+}
+
+
+ol{
+  list-style-type: decimal !important; margin-left: 20px; padding-left: 20px;
+}
+
+
+/* Container usando FLEXBOX */
+
+.flex-container {
+    display: flex;  
+    flex-wrap: wrap;           /* permite quebrar linha */
+    justify-content: center;   /* centraliza horizontalmente */
+    gap: 30px;                 /* espaço entre cards */
+    margin-top: 20px;
+}
+
+/* Cards */
+.card {
+    background-color: #000;
+    padding: 10px;
+    border-radius: 8px;
+    transition: transform 0.2s;
+    width: 300px;              /* controla o tamanho do card */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    background-color: #0a0a0a;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Rodapé */
+footer {
+    margin-top: 40px;
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .card {
+        width: 45%;            /* 2 por linha */
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 90%;            /* 1 por linha */
+    }
+}
+
+        </style>
+
+
+<script src="../js/script.js" defer></script>
+    
+</body>
+</html>
